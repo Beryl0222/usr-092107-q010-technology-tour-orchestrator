@@ -1,0 +1,9 @@
+{
+  "event_id": "sample-010-001",
+  "event_type": "GROUP_PROFILED",
+  "aggregate_type": "visitor_group",
+  "aggregate_id": "technology_tour_orchestrator-001",
+  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "version": 1,
+  "summary": "登记科技研学演示编排器的首条领域记录"
+}
