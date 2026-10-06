@@ -21,8 +21,15 @@
       "enum": [
         "GROUP_PROFILED",
         "SLOT_HELD",
-        "ACCESS_CLEARED",
+        "SLOT_PERMITTED",
         "DEMO_INTERRUPTED",
+        "SAFETY_BRIEFED",
+        "ACCESS_CLEARED",
+        "FILMING_DECIDED",
+        "PAYMENT_SETTLED",
+        "PICKUP_COMPLETED",
+        "RECEIPT_RECORDED",
+        "FALLBACK_ACTIVATED",
         "ITINERARY_REVISED"
       ]
     },
@@ -32,6 +39,9 @@
         "visitor_group",
         "demo_slot",
         "access_clearance",
+        "payment_order",
+        "pickup_task",
+        "partner_receipt",
         "itinerary_revision"
       ]
     },
@@ -50,6 +60,9 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object"
     }
   },
   "additionalProperties": true

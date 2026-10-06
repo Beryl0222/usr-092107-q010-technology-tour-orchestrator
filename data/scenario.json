@@ -1,0 +1,238 @@
+{
+  "description": "外籍研学团深圳一日科技研学：自动驾驶、低空飞行、工厂研发区、机器人门店与商品领取。",
+  "now": "2026-10-06T08:30:00+08:00",
+  "events": [
+    {
+      "event_id": "scn-001",
+      "event_type": "GROUP_PROFILED",
+      "aggregate_type": "visitor_group",
+      "aggregate_id": "grp-hk-intl-2026-10-06",
+      "occurred_at": "2026-09-20T18:00:00+08:00",
+      "version": 1,
+      "summary": "登记外籍研学团资料与基准行程",
+      "payload": {
+        "size": 6,
+        "languages": ["en", "zh"],
+        "interests": ["robotics", "autonomous_driving", "drones"],
+        "member_ids": ["M01", "M02", "M03", "M04", "M05", "M06"],
+        "leader_id": "L01",
+        "payment_order_id": "ORDER-1",
+        "origin_venue_id": "hotel",
+        "transfers": {
+          "hotel>av_park": 40,
+          "av_park>drone_field": 25,
+          "drone_field>canteen": 20,
+          "canteen>factory": 30,
+          "factory>robot_store": 25,
+          "robot_store>pickup_counter": 10,
+          "pickup_counter>hotel": 45,
+          "av_park>science_hall": 15,
+          "science_hall>canteen": 20,
+          "science_hall>drone_field": 15
+        },
+        "stops": [
+          { "stop_id": "ST1", "kind": "demo", "venue_id": "av_park", "start": "2026-10-06T09:00:00+08:00", "end": "2026-10-06T10:00:00+08:00", "slot_id": "S1", "requires_permit": true },
+          { "stop_id": "ST2", "kind": "demo", "venue_id": "drone_field", "start": "2026-10-06T10:30:00+08:00", "end": "2026-10-06T11:30:00+08:00", "slot_id": "S2", "requires_permit": true },
+          { "stop_id": "ST3", "kind": "meal", "venue_id": "canteen", "start": "2026-10-06T12:00:00+08:00", "end": "2026-10-06T13:00:00+08:00" },
+          { "stop_id": "ST4", "kind": "visit", "venue_id": "factory", "start": "2026-10-06T13:30:00+08:00", "end": "2026-10-06T15:00:00+08:00", "zone_id": "ZONE-RD", "requires_filming": true, "sensitive": true },
+          { "stop_id": "ST5", "kind": "shopping", "venue_id": "robot_store", "start": "2026-10-06T15:30:00+08:00", "end": "2026-10-06T16:30:00+08:00", "requires_payment": "ORDER-1" },
+          { "stop_id": "ST6", "kind": "pickup", "venue_id": "pickup_counter", "start": "2026-10-06T16:30:00+08:00", "end": "2026-10-06T17:00:00+08:00", "requires_pickup_ready": "PICK-1" }
+        ],
+        "alternatives": [
+          { "alt_id": "ALT-1", "title": "机器人实验室工作坊", "venue_id": "science_hall", "kinds": ["demo"], "interests": ["robotics"], "languages": ["en", "zh"], "capacity": 30, "duration_min": 60 },
+          { "alt_id": "ALT-2", "title": "室内无人机模拟器", "venue_id": "science_hall", "kinds": ["demo"], "interests": ["drones"], "languages": ["en"], "capacity": 4, "duration_min": 60 }
+        ]
+      }
+    },
+    {
+      "event_id": "scn-002",
+      "event_type": "SLOT_HELD",
+      "aggregate_type": "demo_slot",
+      "aggregate_id": "S1",
+      "occurred_at": "2026-09-21T10:00:00+08:00",
+      "version": 1,
+      "summary": "占位自动驾驶演示时段（预约不等于当日可执行）",
+      "payload": { "slot_id": "S1", "refund_policy": { "free_cancel_before_min": 120, "penalty_pct": 50 } }
+    },
+    {
+      "event_id": "scn-003",
+      "event_type": "SLOT_HELD",
+      "aggregate_type": "demo_slot",
+      "aggregate_id": "S2",
+      "occurred_at": "2026-09-21T10:05:00+08:00",
+      "version": 1,
+      "summary": "占位低空飞行演示时段",
+      "payload": { "slot_id": "S2", "refund_policy": { "free_cancel_before_min": 120, "penalty_pct": 50 } }
+    },
+    {
+      "event_id": "scn-004",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:00:00+08:00",
+      "version": 1,
+      "summary": "M01 完成研发区安全告知",
+      "payload": { "member_id": "M01", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-005",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:01:00+08:00",
+      "version": 1,
+      "summary": "M02 完成研发区安全告知",
+      "payload": { "member_id": "M02", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-006",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:02:00+08:00",
+      "version": 1,
+      "summary": "M03 完成研发区安全告知",
+      "payload": { "member_id": "M03", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-007",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:03:00+08:00",
+      "version": 1,
+      "summary": "M04 完成研发区安全告知",
+      "payload": { "member_id": "M04", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-008",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:04:00+08:00",
+      "version": 1,
+      "summary": "M05 完成研发区安全告知",
+      "payload": { "member_id": "M05", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-009",
+      "event_type": "SAFETY_BRIEFED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:05:00+08:00",
+      "version": 1,
+      "summary": "M06 完成研发区安全告知",
+      "payload": { "member_id": "M06", "zone_id": "ZONE-RD" }
+    },
+    {
+      "event_id": "scn-010",
+      "event_type": "ACCESS_CLEARED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:10:00+08:00",
+      "version": 1,
+      "summary": "M01 本人签署研发区准入",
+      "payload": { "member_id": "M01", "zone_id": "ZONE-RD", "signer_id": "M01", "id_doc_ref": "doc-ref-01" }
+    },
+    {
+      "event_id": "scn-011",
+      "event_type": "ACCESS_CLEARED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:11:00+08:00",
+      "version": 1,
+      "summary": "M02 本人签署研发区准入",
+      "payload": { "member_id": "M02", "zone_id": "ZONE-RD", "signer_id": "M02", "id_doc_ref": "doc-ref-02" }
+    },
+    {
+      "event_id": "scn-012",
+      "event_type": "ACCESS_CLEARED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:12:00+08:00",
+      "version": 1,
+      "summary": "M03 本人签署研发区准入",
+      "payload": { "member_id": "M03", "zone_id": "ZONE-RD", "signer_id": "M03", "id_doc_ref": "doc-ref-03" }
+    },
+    {
+      "event_id": "scn-013",
+      "event_type": "ACCESS_CLEARED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:13:00+08:00",
+      "version": 1,
+      "summary": "M04 本人签署研发区准入",
+      "payload": { "member_id": "M04", "zone_id": "ZONE-RD", "signer_id": "M04", "id_doc_ref": "doc-ref-04" }
+    },
+    {
+      "event_id": "scn-014",
+      "event_type": "ACCESS_CLEARED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T20:14:00+08:00",
+      "version": 1,
+      "summary": "M05 本人签署研发区准入",
+      "payload": { "member_id": "M05", "zone_id": "ZONE-RD", "signer_id": "M05", "id_doc_ref": "doc-ref-05" }
+    },
+    {
+      "event_id": "scn-015",
+      "event_type": "FILMING_DECIDED",
+      "aggregate_type": "access_clearance",
+      "aggregate_id": "ZONE-RD",
+      "occurred_at": "2026-10-05T21:00:00+08:00",
+      "version": 1,
+      "summary": "工厂批准研发区外廊拍摄、核心区禁止",
+      "payload": { "zone_id": "ZONE-RD", "approved": true, "scope": "corridor_only" }
+    },
+    {
+      "event_id": "scn-016",
+      "event_type": "SLOT_PERMITTED",
+      "aggregate_type": "demo_slot",
+      "aggregate_id": "S1",
+      "occurred_at": "2026-10-06T07:30:00+08:00",
+      "version": 1,
+      "summary": "自动驾驶演示当日许可下达",
+      "payload": { "slot_id": "S1", "valid_date": "2026-10-06", "scope": "autonomous_driving" }
+    },
+    {
+      "event_id": "scn-017",
+      "event_type": "DEMO_INTERRUPTED",
+      "aggregate_type": "demo_slot",
+      "aggregate_id": "S2",
+      "occurred_at": "2026-10-06T07:45:00+08:00",
+      "version": 1,
+      "summary": "风雨导致低空飞行当日停飞",
+      "payload": { "slot_id": "S2", "reason_code": "weather_grounded" }
+    },
+    {
+      "event_id": "scn-018",
+      "event_type": "PAYMENT_SETTLED",
+      "aggregate_type": "payment_order",
+      "aggregate_id": "ORDER-1",
+      "occurred_at": "2026-10-06T08:00:00+08:00",
+      "version": 1,
+      "summary": "跨境付款到账，购物环节解锁",
+      "payload": { "order_id": "ORDER-1", "amount": 8600, "currency": "CNY", "rail": "intl_card" }
+    },
+    {
+      "event_id": "scn-019",
+      "event_type": "RECEIPT_RECORDED",
+      "aggregate_type": "partner_receipt",
+      "aggregate_id": "robot_store|PICK-1-READY",
+      "occurred_at": "2026-10-06T08:05:00+08:00",
+      "version": 1,
+      "summary": "门店回执确认备货完成",
+      "payload": { "partner": "robot_store", "external_ref": "PICK-1-READY", "kind": "pickup_ready", "ref": "PICK-1" }
+    },
+    {
+      "event_id": "scn-020",
+      "event_type": "RECEIPT_RECORDED",
+      "aggregate_type": "partner_receipt",
+      "aggregate_id": "robot_store|PICK-1-READY",
+      "occurred_at": "2026-10-06T08:06:00+08:00",
+      "version": 1,
+      "summary": "门店重发的重复回执（应被幂等忽略）",
+      "payload": { "partner": "robot_store", "external_ref": "PICK-1-READY", "kind": "pickup_ready", "ref": "PICK-1" }
+    }
+  ]
+}
