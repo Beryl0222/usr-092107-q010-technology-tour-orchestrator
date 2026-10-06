@@ -1,0 +1,32 @@
+{
+  "event_id": "evt-20261006-0007",
+  "event_type": "ITINERARY_REVISED",
+  "aggregate_type": "itinerary_revision",
+  "aggregate_id": "tour-hk-2026-10-06-01",
+  "occurred_at": "2026-10-06T10:20:00+08:00",
+  "version": 3,
+  "summary": "无人机编队演示因风雨停飞，替换为室内机器人工坊，机器人门店环节顺延20分钟",
+  "causation_id": "evt-20261006-0006",
+  "actor": "replan-service",
+  "payload": {
+    "reason_code": "WEATHER_GROUNDED",
+    "reason_i18n": {
+      "zh": "受风雨天气影响，低空飞行项目当日未获放行",
+      "en": "Low-altitude flights are grounded today due to wind and rain",
+      "ja": "風雨のため、本日の低空飛行プログラムは運休となりました"
+    },
+    "changes": [
+      {
+        "type": "substituted",
+        "segment_id": "seg-uav-demo",
+        "replacement_id": "seg-uav-demo~fb-robot-lab"
+      },
+      {
+        "type": "rescheduled",
+        "segment_id": "seg-robot-store",
+        "new_start": "2026-10-06T14:50:00+08:00",
+        "new_end": "2026-10-06T15:50:00+08:00"
+      }
+    ]
+  }
+}

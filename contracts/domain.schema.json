@@ -14,16 +14,33 @@
   "properties": {
     "event_id": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "全局唯一，消费方据此幂等去重；合作方回执重发同一 event_id 不重复生效"
     },
     "event_type": {
       "type": "string",
       "enum": [
         "GROUP_PROFILED",
         "SLOT_HELD",
+        "SLOT_RELEASED",
+        "DAY_PERMIT_ISSUED",
+        "DAY_PERMIT_REVOKED",
+        "DEVICE_STATUS_CHANGED",
+        "OPERATOR_QUALIFICATION_VERIFIED",
+        "VISITOR_DOCUMENT_VERIFIED",
+        "SAFETY_BRIEFING_ACKED",
+        "RESTRICTED_AREA_SIGNED",
         "ACCESS_CLEARED",
+        "FILMING_PERMIT_GRANTED",
+        "FILMING_PERMIT_REVOKED",
+        "PAYMENT_SETTLED",
+        "REFUND_ISSUED",
+        "PICKUP_READY",
+        "PICKUP_COMPLETED",
         "DEMO_INTERRUPTED",
-        "ITINERARY_REVISED"
+        "FALLBACK_ACTIVATED",
+        "ITINERARY_REVISED",
+        "PARTNER_RECEIPT_RECORDED"
       ]
     },
     "aggregate_type": {
@@ -31,8 +48,16 @@
       "enum": [
         "visitor_group",
         "demo_slot",
+        "day_permit",
+        "device_asset",
+        "operator",
         "access_clearance",
-        "itinerary_revision"
+        "filming_permit",
+        "payment_order",
+        "pickup_order",
+        "fallback_program",
+        "itinerary_revision",
+        "partner_receipt"
       ]
     },
     "aggregate_id": {
@@ -50,6 +75,22 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "causation_id": {
+      "type": "string",
+      "description": "触发本事件的上游事件 id"
+    },
+    "supersedes": {
+      "type": "string",
+      "description": "更正历史记录时指向被更正事件的 id；原记录不原地改写"
+    },
+    "actor": {
+      "type": "string",
+      "description": "产生本事件的系统或角色"
+    },
+    "payload": {
+      "type": "object",
+      "description": "各事件类型的业务负载，逐类型的必填约束见 src/validator.js"
     }
   },
   "additionalProperties": true
